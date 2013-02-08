@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html style="position: absolute; left:0px; top:0px; bottom: 0px; right: 0px;">
+<head>
+    <title>Divs Test</title>
+    <script src="http://yui.yahooapis.com/3.8.1/build/yui/yui-min.js"></script>
+</head>
+<body style="position: absolute; left:0px; top:0px; bottom: 0px; right: 0px; background: white;">
+    <div id="example" class="yui3-skin-sam"  style="  margin: 70px; position:absolute;left:0px; top:0px; right:0px; bottom:0px">
+
+    </div>
+<script type="text/javascript">
+
+    // Create a new YUI instance and populate it with the required modules.
+    YUI().use('datatable', function (Y) {
+        // DataTable is available and ready for use. Add implementation
+        // code here.
+
+        // Columns must match data object property names
+        var data = [
+            { id: "ga-3475", name: "gadget",   price: "$6.99", cost: "$5.99" },
+            { id: "sp-9980", name: "sprocket", price: "$3.75", cost: "$3.25" },
+            { id: "sp-1180", name: "sprocket 2", price: "$3.75", cost: "$3.25" },
+            { id: "sp-9210", name: "sprocket 3", price: "$6.75", cost: "$3.25" },
+            { id: "sp-9933", name: "New gear", price: "$45.75", cost: "$3.25" },
+            { id: "sp-4480", name: "wheel", price: "$3.70", cost: "$3.25" },
+            { id: "wi-0650", name: "widget",   /* missing */   cost: "$3.75" }
+        ];
+
+        var table = new Y.DataTable({
+            columns: [
+                { key:"id", label:"ID" },
+                { key: "name", label: "Part name", sortable:true },
+                { key: "price", label:"Price", allowHTML: true, emptyCellValue: "<em>(not set)</em>", sortable:true },
+                { key: "cost", label: "Cost", sortable:true }
+            ],
+            data: data
+        });
+
+        table.render("#example");
+    });
+
+</script>
+
+</body>
+</html>

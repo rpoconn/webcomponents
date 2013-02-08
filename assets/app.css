@@ -1,0 +1,219 @@
+
+html, body {
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+}
+
+.AppView {
+    position:absolute;
+    display: inline;
+    left:0px;
+    top:0px;
+    bottom:0px;
+    right:0px;
+}
+
+.AppBackground {
+    background: linear-gradient(#3984c2 0%,#1d4464 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3984c2', endColorstr='#1d4464',GradientType=0 ); /** All IE */
+    position: absolute;
+    left:0px;
+    top:0px;
+    bottom:0px;
+    right:0px;
+}
+
+.BackgroundImage {
+    background: no-repeat url("assets/img/appBackground.jpg");
+    min-width: 0px;
+    min-height: 0px;
+    overflow: hidden;
+}
+
+.MainView {
+    position:absolute;
+    left:20px;
+    top:10px;
+    bottom:20px;
+    right:20px;
+}
+
+.AppTitleBar {
+    float:left;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.titleBarText {
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.LoginView {
+    position: absolute;
+    display:inline;
+    left:50px;
+    top:0px;
+    bottom:0px;
+    right:0px;
+}
+
+.LoginTable {
+    height:100%;
+}
+
+.AppTitle {
+    padding-left: 20px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+.OverlapRow {
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.RelativeParent {
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+.AbsolutePosition {
+    position:absolute;
+}
+
+/** Main app border CSS */
+
+.BorderBackground {
+    background: white;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;;
+    filter:alpha(opacity=50);
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    border-radius: 8px;
+}
+
+.MainAppBorder {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    right: 8px;
+}
+
+/** Home View */
+
+.HomeView {
+    width: 100%;
+    height: 100%;
+}
+
+/** Users */
+
+.AllUsers {
+    width: 100%;
+    height: 100%;
+}
+
+.AllMessages {
+    width: 100%;
+    height: 100%;
+}
+
+.leftMenuBar {
+    height: 100%;
+}
+
+.smallMargins {
+    margin: 5px;
+}
+
+
+.LoginFormField {
+    padding-right: 10px;
+    color:white;
+}
+
+.LoginButton {
+    text-align: right;
+}
+
+.whiteText {
+    color:white;
+}
+
+.probeText {
+    color:white;
+    position: relative;
+    text-align: right;
+}
+
+.rightSeparator {
+    color:white;
+}
+
+.Stretcher {
+    width:100%;
+    height:100%;
+}
+
+.hiddenOverflow {
+    overflow:hidden;
+    height: 1px;
+    overflow: hidden;
+    font-size:0pt;
+    margin-top: -1px;
+}
+
+.horizontalStretch {
+    width:100%;
+}
+
+.verticalStretch {
+    height: 100%;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+.largeBorder {
+    margin: 20px;
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.vMiddleAlign {
+    vertical-align: middle;
+}
+
+/** Components */
+
+.GridView {
+    overflow:scroll;
+}
