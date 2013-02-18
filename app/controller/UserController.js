@@ -5,7 +5,7 @@ define(["model/AllUsersModel", "view/AllUsers", "clientService/RPCServices", "cl
     App.UserController = function(appModel) {
         _.extend(this, Backbone.Events);
         this.model = new App.AllUsersModel({appModel:appModel});
-        this.view = new App.AllDepots({model:this.model});
+        this.view = new App.AllUsers({model:this.model});
         this.getAllUsers();
         ///this.view.on("login", this.login)
     }

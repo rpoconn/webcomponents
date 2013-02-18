@@ -87,8 +87,8 @@ function onRequest(req, res) {
             break;
     }
 
-    res.write("var data = " + JSON().stringify(responseObj) + "\n");
-    res.write(req.params['callback'] + "(data);\n");
+    res.write("var data = " + JSON.stringify(responseObj) + "\n");
+    res.write(urlParts.query['callback'] + "(data);\n");
     res.end();
 }
 

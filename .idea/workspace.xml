@@ -47,31 +47,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="companyLogo.jpg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/img/companyLogo.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.gif" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/img/home.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appBackground.jpg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/img/appBackground.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginView.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LoginView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/LoginView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="39" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.80921054">
+            <state line="41" column="39" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RPCServices.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/clientService/RPCServices.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="31" selection-start="2149" selection-end="2149" vertical-scroll-proportion="0.7302632">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="node.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/node.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="5" selection-start="2517" selection-end="2517" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controller/UserController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="36" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,14 +130,14 @@
         <option value="$PROJECT_DIR$/visl/components/ListView.js" />
         <option value="$PROJECT_DIR$/visl/components/GridView.js" />
         <option value="$PROJECT_DIR$/visl/view/MainView.js" />
-        <option value="$PROJECT_DIR$/server/node.js" />
-        <option value="$PROJECT_DIR$/app/clientService/RPCServices.js" />
         <option value="$PROJECT_DIR$/app/controller/MessageController.js" />
-        <option value="$PROJECT_DIR$/app/controller/UserController.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/view/AppBackground.js" />
         <option value="$PROJECT_DIR$/assets/app.css" />
         <option value="$PROJECT_DIR$/app/view/LoginView.js" />
+        <option value="$PROJECT_DIR$/server/node.js" />
+        <option value="$PROJECT_DIR$/app/controller/UserController.js" />
+        <option value="$PROJECT_DIR$/app/clientService/RPCServices.js" />
       </list>
     </option>
   </component>
@@ -370,6 +376,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vISL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clientService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -565,30 +589,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/model/AllUsersModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/AllMessagesModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MessageController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="22" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/UserController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="916" selection-end="916" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -670,7 +673,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/LoginView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="39" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.80921054">
+        <state line="41" column="39" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/node.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="5" selection-start="2517" selection-end="2517" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/UserController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="36" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/clientService/RPCServices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="31" selection-start="2149" selection-end="2149" vertical-scroll-proportion="0.7302632">
           <folding />
         </state>
       </provider>

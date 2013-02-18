@@ -7,7 +7,12 @@ define(function() {
     App.RPCServices = function() {
 
         this.serviceURL = "http://localhost:8080/";
-        $.ajaxSettings = {crossDomain:true, dataType:"jsonp"};
+        $.ajaxSettings.crossDomain = true;
+        $.ajaxSettings.dataType = "jsonp";
+        $.ajaxSettings.accepts = "jsonp";
+        $.ajaxSettings.cache = false;
+        $.ajaxSettings.fail = this.errorHandler;
+        $.ajaxSettings.complete = this.completeHandler;
 
         if (App.service) {
             throw "Only instantiate one App.RPCServices class";
@@ -20,77 +25,40 @@ define(function() {
         //window.userName = username;
         //window.password = password;
 
-        var jqxhr = $.getJSON(this.serviceURL + 'login?userID='+encodeURIComponent(username), {data:user});
-        jqxhr.done(callback);
-        jqxhr.fail(this.errorHandler);
-        jqxhr.complete(this.completeHandler);
+        var jqxhr = $.ajax({url:this.serviceURL + 'login', data: {username:username, password:password},
+        success:callback});
     }
 
-
-    App.RPCServices.prototype.GetAllUsers = function(callback) {
-
-        var jqxhr = $.getJSON(this.serviceURL + 'users?method=GET');
-        jqxhr.done(callback);
-        jqxhr.fail(this.errorHandler);
-        jqxhr.complete(this.completeHandler);
+    App.RPCServices.prototype.getAllUsers = function(callback) {
+        var jqxhr = $.ajax({url:this.serviceURL + 'users?method=GET', success:callback});
     }
 
-    App.RPCServices.prototype.GetAllMessages = function(callback) {
-
-        var jqxhr = $.getJSON(this.serviceURL + 'messages?method=GET');
-        jqxhr.done(callback);
-        jqxhr.fail(this.errorHandler);
-        jqxhr.complete(this.completeHandler);
+    App.RPCServices.prototype.getAllMessages = function(callback) {
+        var jqxhr = $.ajax({url:this.serviceURL + 'messages?method=GET', success:callback});
     }
 
-    App.RPCServices.prototype.AddUser = function(user, callback) {
-
-        var jqxhr = $.getJSON(this.serviceURL + 'users?method=ADD', {data:user});
-        jqxhr.done(callback);
-        jqxhr.fail(this.errorHandler);
-        jqxhr.complete(this.completeHandler);
+    App.RPCServices.prototype.addUser = function(user, callback) {
+        var jqxhr = $.getJSON({url:this.serviceURL + 'users?method=ADD', data:user, success:callback});
     }
 
-    App.RPCServices.prototype.AddMessage = function(message, callback) {
-
-        var jqxhr = $.getJSON(this.serviceURL + 'messages?method=ADD', {data:message});
-        jqxhr.done(callback);
-        jqxhr.fail(this.errorHandler);
-        jqxhr.complete(this.completeHandler);
+    App.RPCServices.prototype.addMessage = function(message, callback) {
+        var jqxhr = $.ajax({url:this.serviceURL + 'messages?method=ADD', data:message, success:callback});
     }
 
-    App.RPCServices.prototype.UpdateUser = function(user, callback) {
-
-        var jqxhr = $.getJSON(this.serviceURL + 'users?method=UPDATE', {data:user});
-        jqxhr.done(callback);
-        jqxhr.fail(this.errorHandler);
-        jqxhr.complete(this.completeHandler);
+    App.RPCServices.prototype.updateUser = function(user, callback) {
+        var jqxhr = $.ajax({url:this.serviceURL + 'users?method=UPDATE', data:user, success:callback});
     }
 
-    App.RPCServices.prototype.UpdateMessage = function(message, callback) {
-
-        this.serviceParams.clone();
-
-        var jqxhr = $.getJSON(this.serviceURL + 'messages?method=UPDATE', {data:message});
-        jqxhr.done(callback);
-        jqxhr.fail(this.errorHandler);
-        jqxhr.complete(this.completeHandler);
+    App.RPCServices.prototype.updateMessage = function(message, callback) {
+        var jqxhr = $.ajax({url:this.serviceURL + 'messages?method=UPDATE', data:message, success:callback});
     }
 
-    App.RPCServices.prototype.DeleteUser = function(user, callback) {
-
-        var jqxhr = $.getJSON(this.serviceURL + 'users?method=DELETE', {data:user});
-        jqxhr.done(callback);
-        jqxhr.fail(this.errorHandler);
-        jqxhr.complete(this.completeHandler);
+    App.RPCServices.prototype.deleteUser = function(user, callback) {
+        var jqxhr = $.ajax({url:this.serviceURL + 'users?method=DELETE', data:user, success:callback});
     }
 
-    App.RPCServices.prototype.DeleteMessage = function(message, callback) {
-
-        var jqxhr = $.getJSON(this.serviceURL + 'messages?method=DELETE', {data:message});
-        jqxhr.done(callback);
-        jqxhr.fail(this.errorHandler);
-        jqxhr.always(this.completeHandler);
+    App.RPCServices.prototype.deleteMessage = function(message, callback) {
+        var jqxhr = $.ajax({url:this.serviceURL + 'messages?method=DELETE', data:message, success:callback});
     }
 
     /** Error handlers */
