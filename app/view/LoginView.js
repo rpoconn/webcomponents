@@ -30,7 +30,7 @@ App.LoginView = Backbone.View.extend({
         var row3 = this.createRowItem();
         var row4 = this.createRowItem();
 
-        row0.setAttribute("height", "100%");
+        row0.setAttribute("height", "50%");
         row1.appendChild(this.createCellItem(this.createSpanItem("Username:", "LoginFormField")));
         row1.appendChild(this.createCellItem(this.usernameField));
         row2.appendChild(this.createCellItem(this.createSpanItem("Password:", "LoginFormField")));
@@ -39,8 +39,8 @@ App.LoginView = Backbone.View.extend({
         var buttonCell = this.createCellItem(loginButton)
         buttonCell.setAttribute("class", "LoginButton");
         row3.appendChild(buttonCell);
-        row4.setAttribute("height", "100px");
-        var appTitle = this.createSpanItem("VMware Infrastructure Software Lifecycle Manager");
+        row4.setAttribute("height", "50%");
+        var appTitle = this.createSpanItem("User Messages Console");
         appTitle.setAttribute("class", "AppTitle");
         row1.appendChild(this.createCellItem(appTitle));
 

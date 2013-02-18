@@ -1,38 +1,27 @@
 "use strict";
 
-define(["model/AllUsersModel", "view/AllUsers", "clientService/RPCServices", "clientService/data/DepotVO"], function() {
+define(["model/AllUsersModel", "view/AllUsers", "clientService/RPCServices", "clientService/data/UserVO"], function() {
 
     App.UserController = function(appModel) {
         _.extend(this, Backbone.Events);
         this.model = new App.AllUsersModel({appModel:appModel});
         this.view = new App.AllDepots({model:this.model});
-        this.getAllDepots();
+        this.getAllUsers();
         ///this.view.on("login", this.login)
     }
 
-    App.UserController.prototype.getAllDepots = function() {
+    App.UserController.prototype.getAllUsers = function() {
         console.log('Getting All depots');
         var that = this;
-        var allDepots = [];
-        var allDepotUUIDs = [];
 
-        function onGetDepot(depot) {
-            allDepots.push(new App.DepotVO(depot));
-            if (allDepotUUIDs.length == allDepots.length) {
-                that.model.set('depots', allDepots);
-            }
-        }
         function onSuccess(result) {
-            allDepotUUIDs = result.depots;
-            for (var index in allDepotUUIDs) {
-                var uuid = allDepotUUIDs[index];
-                App.service.getDepot(uuid, onGetDepot);
+            var allUsers = []
+            for (var user in result.users) {
+                allUsers.push(new App.UserVO(result.users[user]));
             }
-            if (!allDepotUUIDs.length) {
-                that.model.set('depots', allDepots);
-            }
-            console.log('GetAllDepots result' + result);
+            that.model.set('users', allUsers);
+            console.log('GetAllUsers result' + result);
         }
-        App.service.getAllDepotUUIDs(onSuccess);
+        App.service.getAllUsers(onSuccess);
     }
 });

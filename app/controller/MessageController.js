@@ -1,32 +1,27 @@
 "use strict";
 
-define(["model/AllMessagesModel", "view/AllBundles", "clientService/RPCServices", "clientService/data/BundleVO"], function() {
+define(["model/AllMessagesModel", "view/AllMessages", "clientService/RPCServices", "clientService/data/MessageVO"], function() {
 
     App.MessageController = function(appModel) {
         _.extend(this, Backbone.Events);
         this.model = new App.AllMessagesModel({appModel:appModel});
-        this.view = new App.AllBundles({model:this.model});
-        this.getAllBundles();
+        this.view = new App.AllMessages({model:this.model});
+        this.getAllMessages();
     }
 
-    App.MessageController.prototype.getAllBundles = function() {
-        console.log('Getting All Bundles');
+    App.MessageController.prototype.getAllMessages = function() {
+        console.log('Getting All Messages');
         var that = this;
-        var allBundles = [];
-        var allBundleUUIDs = [];
-        function onGetBundles(response) {
-            for ( var bundleIndex in response.bundles) {
-                var bundle = response.bundles[bundleIndex];
-                allBundles.push(new App.BundleVO(bundle));
-            }
-            that.model.set('bundles', allBundles);
-        }
-        function onSuccess(result) {
-            allBundleUUIDs = result.bundleUris;
-            App.service.getBundleMetadata(allBundleUUIDs, onGetBundles);
 
-            console.log('GetAllBundles result' + result);
+        function onGetMessages(response) {
+            var allMessages = [];
+            for ( var messageIndex in response.messages) {
+                var message = response.messages[messageIndex];
+                allMessages.push(new App.MessageVO(message));
+            }
+            that.model.set('messages', allMessages);
+            console.log('GetAllMessages result' + result);
         }
-        App.service.getAllBundleIds(onSuccess);
+        App.service.getAllMessages(onGetMessages);
     }
 });

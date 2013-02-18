@@ -12,7 +12,7 @@ App.Background = Backbone.View.extend({
     },
     render: function() {
         var backgroundImage = document.createElement("div");
-        backgroundImage.setAttribute("class", "BackgroundImage Stretcher");
+        backgroundImage.setAttribute("class", "BackgroundImage");
         this.el.appendChild(backgroundImage);
     }
 });

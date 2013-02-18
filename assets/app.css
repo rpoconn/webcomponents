@@ -16,8 +16,7 @@ html, body {
 }
 
 .AppBackground {
-    background: linear-gradient(#3984c2 0%,#1d4464 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3984c2', endColorstr='#1d4464',GradientType=0 ); /** All IE */
+    background: #0D014D;
     position: absolute;
     left:0px;
     top:0px;
@@ -26,10 +25,14 @@ html, body {
 }
 
 .BackgroundImage {
-    background: no-repeat url("assets/img/appBackground.jpg");
+    background: no-repeat url("img/appBackground.jpg");
     min-width: 0px;
     min-height: 0px;
-    overflow: hidden;
+    bottom: 0px;
+    height: 100%;
+    align:bottom;
+    vertical-align: bottom;
+    overflow: hidden ;
 }
 
 .MainView {
@@ -165,7 +168,7 @@ html, body {
     color:white;
 }
 
-.probeText {
+.appStatusText {
     color:white;
     position: relative;
     text-align: right;
