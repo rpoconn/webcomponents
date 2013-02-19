@@ -83,7 +83,7 @@ function onRequest(req, res) {
             responseObj = handleMessages(req, res);
             break;
         case "login":
-            responseObj = {status:"OK"};
+            responseObj = {userRole:{username:"User 1"}};
             break;
     }
 

@@ -20,7 +20,7 @@ define(["model/AllMessagesModel", "view/AllMessages", "clientService/RPCServices
                 allMessages.push(new App.MessageVO(message));
             }
             that.model.set('messages', allMessages);
-            console.log('GetAllMessages result' + result);
+            console.log('GetAllMessages result' + response);
         }
         App.service.getAllMessages(onGetMessages);
     }

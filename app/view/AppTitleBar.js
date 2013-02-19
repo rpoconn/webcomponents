@@ -20,12 +20,11 @@ define(function () {
                 this.el.children[3].textContent =  model.get('userRole').username;
             }
         },
-        mainLayout: "<img src='assets/images/companyLogo.jpg'  class='floatLeft' style='padding-top: 4px; padding-right: 5px; width: 50px; height:50px;'  />" +
+        mainLayout: "<img src='assets/img/companyLogo.jpg'  class='floatLeft' style='padding-top: 4px; padding-right: 5px; width: 50px; height:50px;'  />" +
                     "<span class='titleBarText floatLeft'>HTMLTest</span>" +
                     "<span class='whiteText smallMargins floatRight'>Help</span>" +
-                    "<span id='username' class='rightSeparator smallMargins floatRight'></span>" +
-                    "<img src='assets/images/refresh-normal-16x16.png' class='rightSeparator smallMargins floatRight' />" +
-                    "<span class='probeText smallMargins noWrap floatRight'>Probes have not been run</span>"
+                    "<span id='username' class='rightSeparator smallMargins floatRight'></span>"
+
 
 
 
