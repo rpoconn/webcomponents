@@ -13,8 +13,8 @@ define(function() {
         },
         setViewIndex: function(index) {
             this.viewIndex = index;
-            if (this.currentItem) {
-                this.el.removeChild(this.currentItem);
+            if (this.el.hasChildNodes()) {
+                this.el.removeChild(this.el.children[0]);
             }
             if (this.items && this.viewIndex >= 0) {
                 var items = this.items;

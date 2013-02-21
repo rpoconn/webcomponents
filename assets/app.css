@@ -238,28 +238,29 @@ html, body {
 .simple-list {
     background: white;
     list-style-type: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 .simple-list-item {
     clear: both;
     list-style-type: none;
-    padding:5px 5px 5px 5px;
+    margin:0px;
+    padding: 0px;
+
+}
+
+.simple-list-item:hover {
+    background-color: #149bdf;
 }
 
 .simple-list-item a {
-    background-color: white;
     text-decoration: none;
     color: #000000;
     white-space: nowrap;
     vertical-align: baseline;
-}
+    margin: 10px;
 
-.simple-list-item a:hover{
-    background-color: #1e90ff;
-    text-decoration: none;
-    color: #000000;
-    white-space: nowrap;
-    vertical-align: baseline;
 }
 
 .simple-list-item a span {
