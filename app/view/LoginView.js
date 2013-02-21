@@ -66,7 +66,7 @@ App.LoginView = Backbone.View.extend({
 
     createSpanItem: function(label, styleClass) {
         var span = document.createElement("span");
-        span.setAttribute("class", styleClass ? styleClass : "whiteText");
+        span.setAttribute("class", styleClass ? styleClass : "");
         span.textContent = label;
         return span;
     },

@@ -50,7 +50,7 @@ define(['view/AppTitleBar','model/LeftSidebarModel','components/ListView', 'comp
                         "<tr class='Stretcher' >" +
                             "<td class='Stretcher'>" +
                                 "<div class='RelativeParent'>" +
-                                    "<div class='BorderBackground' ></div>" +
+                                    "<div class='BorderBackground shadow' ></div>" +
                                     "<div class='MainAppBorder' >" +
                                         "<table class='Stretcher'>" +
                                             "<tbody class='Stretcher'>" +

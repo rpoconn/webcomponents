@@ -22,7 +22,7 @@ define(function () {
         },
         mainLayout: "<img src='assets/img/companyLogo.png'  class='floatLeft' style=' padding-right: 15px; width: 25px; height:25px;'  />" +
                     "<span class='titleBarText floatLeft'>HTMLTest</span>" +
-                    "<span class='whiteText smallMargins floatRight'>Help</span>" +
+                    "<span class=' smallMargins floatRight'>Help</span>" +
                     "<span id='username' class='rightSeparator smallMargins floatRight'></span>"
 
 
