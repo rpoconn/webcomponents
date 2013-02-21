@@ -32,10 +32,6 @@ define(function() {
             '<tr class="horizontalStretch" >\
                 <td class="panel-titlebar horizontalStretch" >\
                     <span class="titlebar-label"><%= title %></span>\
-                    <!--        <span class="vmw-titlebar-close-icon"><a href=""></a></span>   --> <!--Alternate to using Pin icon-->\
-                    <span class="titlebar-pin-icon"><a href=""></a></span>\
-                    <!--		<span class="vmw-titlebar-minimize-icon"><a class="disabled" href=""></a></span>-->\
-                    <!--        <span class="vmw-titlebar-edit-icon"><a href=""></a></span>-->\
                 </td>\
              </tr>\
              <tr class="panel-body horizontalStretch verticalStretch"> \

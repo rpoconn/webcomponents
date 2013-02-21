@@ -20,7 +20,7 @@ define(function () {
                 this.el.children[3].textContent =  model.get('userRole').username;
             }
         },
-        mainLayout: "<img src='assets/img/companyLogo.jpg'  class='floatLeft' style='padding-top: 4px; padding-right: 5px; width: 50px; height:50px;'  />" +
+        mainLayout: "<img src='assets/img/companyLogo.png'  class='floatLeft' style=' padding-right: 15px; width: 25px; height:25px;'  />" +
                     "<span class='titleBarText floatLeft'>HTMLTest</span>" +
                     "<span class='whiteText smallMargins floatRight'>Help</span>" +
                     "<span id='username' class='rightSeparator smallMargins floatRight'></span>"

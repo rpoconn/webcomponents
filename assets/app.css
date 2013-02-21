@@ -25,7 +25,7 @@ html, body {
 }
 
 .BackgroundImage {
-    background: no-repeat url("img/appBackground.jpg");
+    background-color: #333333;
     min-width: 0px;
     min-height: 0px;
     bottom: 0px;
@@ -47,6 +47,8 @@ html, body {
     float:left;
     width: 100%;
     vertical-align: middle;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .titleBarText {
@@ -215,6 +217,16 @@ html, body {
     vertical-align: middle;
 }
 
+/** Panels */
+
+.panel-body {
+    background-color: #ffffff;
+}
+
+.panel-titlebar {
+    background-color: #777777;
+}
+
 /** Components */
 
 .GridView {
@@ -234,19 +246,27 @@ html, body {
     padding:5px 5px 5px 5px;
 }
 
-.simple-list-item div {
+.simple-list-item a {
+    background-color: white;
     text-decoration: none;
     color: #000000;
     white-space: nowrap;
     vertical-align: baseline;
 }
 
-.simple-list-item div span {
-    float: left;
+.simple-list-item a:hover{
+    background-color: #1e90ff;
+    text-decoration: none;
+    color: #000000;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.simple-list-item a span {
     text-decoration: none;
     color: #000000;
 }
 
-.simple-list-item div img{
-    float: left;
+.simple-list-item a img{
+
 }

@@ -32,10 +32,10 @@ define(function() {
                         <ul class="simple-list">\
                             <% _.each( listItems, function( listItem ){ %>\
                             <li class="simple-list-item" value="<%- listItem.key %>"  >\
-                                <div>\
+                                <a>\
                                     <img style="padding-bottom: 5px" width="15" height="15" src="<%- listItem.icon %>"/>\
                                     <span ><%- listItem.name %></span>\
-                                </div>\
+                                </a>\
                             </li>\
                             <% }); %>\
                         </ul>\
