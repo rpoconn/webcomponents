@@ -1,6 +1,6 @@
 "use strict";
 
-define(['components/ViewStack', 'controller/UserController', 'controller/MessageController'], function () {
+define(['components/ViewStack', 'controller/UserController', 'controller/MessageController', 'view/HomeView'], function () {
 
     App.MainViewStack = Backbone.View.extend({
         tagName: "div",
@@ -18,7 +18,7 @@ define(['components/ViewStack', 'controller/UserController', 'controller/Message
             this.el.appendChild(this.stack.el);
             var depotsController = new App.UserController({model:this.model.get('appModel')});
             var bundlesController = new App.MessageController({model:this.model.get('appModel')});
-            var home = new App.Home();
+            var home = new App.HomeView({model:this.model.get('appModel')});
             var items = [depotsController.view.el, bundlesController.view.el];
             this.stack.setViewItems(items);
             this.stack.setViewIndex(0);
