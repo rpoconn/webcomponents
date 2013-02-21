@@ -220,3 +220,33 @@ html, body {
 .GridView {
     overflow:scroll;
 }
+
+/** List **/
+
+.simple-list {
+    background: white;
+    list-style-type: none;
+}
+
+.simple-list-item {
+    clear: both;
+    list-style-type: none;
+    padding:5px 5px 5px 5px;
+}
+
+.simple-list-item div {
+    text-decoration: none;
+    color: #000000;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.simple-list-item div span {
+    float: left;
+    text-decoration: none;
+    color: #000000;
+}
+
+.simple-list-item div img{
+    float: left;
+}
