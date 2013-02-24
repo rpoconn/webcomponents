@@ -6,12 +6,11 @@ define(function() {
 
     App.ListView = Backbone.View.extend({
         tagName: "div",
-        className: "horizontalStretch verticalStretch vmw-list-section",
+        className: "horizontalStretch verticalStretch",
         events: { "click li": 'onItemClicked' },
         initialize: function() {
             _.bindAll(this);
             this.listenTo(this.model, "change:items", this.render);
-            //this.el.onItemClicked = this.onItemClicked;
             this.render.apply(this);
         },
         render: function() {
@@ -22,11 +21,6 @@ define(function() {
             if (items) {
                 var compiledList = _.template(this.template, {listItems:items, parentID:this});
                 this.el.innerHTML = compiledList;
-                var childList = this.el.firstElementChild.firstElementChild.children;
-                //var parentList = this;
-                //for (var node in childList) {
-                //    childList[node].onclick= function(event) { parentList.onItemClicked(event) }
-                //}
             }
         },
         onItemClicked: function (event) {
@@ -34,12 +28,12 @@ define(function() {
             console.log("item clicked:" + event.currentTarget.firstElementChild.children[1].text + " key:" + key);
             this.trigger("clicked", key)
         },
-        template: '<div >\
+        template: '<div class="horizontalStretch verticalStretch">\
                         <ul class="simple-list">\
                             <% _.each( listItems, function( listItem ){ %>\
-                            <li id="vertical-nav" value="<%- listItem.key %>"  >\
+                            <li class="simple-list-item" value="<%- listItem.key %>"  >\
                                 <a>\
-                                    <img style="padding-bottom: 5px" src="<%- listItem.icon %>"/>\
+                                    <img style="padding-bottom: 5px" width="15" height="15" src="<%- listItem.icon %>"/>\
                                     <span ><%- listItem.name %></span>\
                                 </a>\
                             </li>\

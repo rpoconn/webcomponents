@@ -19,7 +19,7 @@ define(['components/ViewStack', 'controller/UserController', 'controller/Message
             var depotsController = new App.UserController({model:this.model.get('appModel')});
             var bundlesController = new App.MessageController({model:this.model.get('appModel')});
             var home = new App.HomeView({model:this.model.get('appModel')});
-            var items = [depotsController.view.el, bundlesController.view.el];
+            var items = [home.el, depotsController.view.el, bundlesController.view.el];
             this.stack.setViewItems(items);
             this.stack.setViewIndex(0);
         }

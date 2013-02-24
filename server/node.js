@@ -3,7 +3,7 @@ var users = [];
 var messages = [];
 
 var http = require('http');
-var listenPort = 8080;
+var listenPort = 8090;
 
 function handleUsers(req, res) {
     var response = {};

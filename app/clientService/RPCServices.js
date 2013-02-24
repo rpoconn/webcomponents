@@ -6,7 +6,7 @@ define(function() {
 
     App.RPCServices = function() {
 
-        this.serviceURL = "http://localhost:8080/";
+        this.serviceURL = "http://localhost:8090/";
         $.ajaxSettings.crossDomain = true;
         $.ajaxSettings.dataType = "jsonp";
         $.ajaxSettings.accepts = "jsonp";

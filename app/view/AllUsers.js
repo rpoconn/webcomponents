@@ -29,6 +29,10 @@ define(['components/GridView'], function() {
             this.gridModel.set('items', this.model.get('users'));
         },
         render: function() {
+            while(this.el.hasChildNodes()) {
+                this.el.removeChild(this.el.children[0]);
+            }
+
             this.el.appendChild(this.grid.el);
             this.onColumnsChange();
             this.onItemsChange();
